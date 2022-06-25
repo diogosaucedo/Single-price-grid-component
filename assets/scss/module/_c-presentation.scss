@@ -1,0 +1,26 @@
+@use "../base/colors";
+@use "../base/extends";
+@use "../base/mixins";
+
+.c-presentation {
+  grid-column: span 2;
+  @extend %u-display-flex, %u-flex-direction-column, %u-justify-space-between;
+
+  padding: 3rem;
+  border-radius: 1rem 1rem 0 0;
+
+  background-color: colors.$white;
+
+  &__title {
+    padding: 0 0 1rem 0;
+    @include mixins.custom-font(1.7rem, 700, colors.$cyan);
+  }
+
+  &__text {
+    @include mixins.custom-font(1.2rem, 400, colors.$grayish-blue);
+
+    &--highlight {
+      @include mixins.custom-font(1.3rem, 400, colors.$bright-yellow);
+    }
+  }
+}

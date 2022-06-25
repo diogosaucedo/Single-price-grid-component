@@ -1,0 +1,23 @@
+@use "../base/colors";
+@use "../base/extends";
+@use "../base/mixins";
+
+.c-reasons {
+  @extend %u-display-flex, %u-flex-direction-column, %u-justify-space-between;
+
+  padding: 3rem;
+  border-radius: 0 0 1rem 0;
+
+  background-color: lighten(colors.$cyan, 5%);
+  @include mixins.custom-font(1rem, 400, colors.$white);
+
+  &__title {
+    font-size: 1.4rem;
+    font-weight: 700;
+  }
+
+  &__item {
+    list-style: none;
+    padding: 0.2rem 0;
+  }
+}

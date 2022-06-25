@@ -1,0 +1,50 @@
+@use "../base/colors";
+@use "../base/extends";
+@use "../base/mixins";
+
+.c-subscription {
+  @extend %u-display-flex, %u-flex-direction-column, %u-justify-space-between;
+
+  padding: 3rem;
+  border-radius: 0 0 0 1rem;
+
+  background-color: colors.$cyan;
+  @include mixins.custom-font(1rem, 400, colors.$white);
+
+  &__name {
+    font-size: 1.4rem;
+    font-weight: 700;
+  }
+
+  &__price {
+    @extend %u-display-flex;
+    align-items: center;
+  }
+
+  &__value {
+    font-size: 2.8rem;
+  }
+
+  &__monthly-fee {
+    padding: 0 1rem;
+    font-size: 1rem;
+  }
+
+  &__text {
+    font-size: 1.2rem;
+  }
+
+  &__button {
+    @extend %u-display-flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 3rem;
+    border-radius: 0.5rem;
+
+    text-decoration: none;
+    background-color: colors.$bright-yellow;
+    color: colors.$white;
+    box-shadow: 0rem 0rem 0.5rem rgba(0, 0, 0, 0.2);
+  }
+}

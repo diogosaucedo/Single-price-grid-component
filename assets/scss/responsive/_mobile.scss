@@ -1,0 +1,53 @@
+@media only screen and (max-width: 480px) {
+  .l-container {
+    width: 90%;
+    height: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: 27rem 24rem 24rem;
+  }
+
+  .c-presentation {
+    grid-column: 1;
+
+    &__title {
+      font-size: 2.2rem;
+    }
+    &__text {
+      font-size: 1.4rem;
+      line-height: 2.5rem;
+      &--highlight {
+        font-size: 1.8rem;
+      }
+    }
+  }
+
+  .c-subscription {
+    border-radius: 0;
+    &__name {
+      font-size: 1.8rem;
+    }
+    &__value {
+      font-size: 3.6rem;
+    }
+    &__monthly-fee {
+      font-size: 1.6rem;
+    }
+    &__text {
+      font-size: 1.6rem;
+    }
+    &__button {
+      height: 4rem;
+      font-size: 1.6rem;
+    }
+  }
+
+  .c-reasons {
+    border-radius: 0 0 1rem 1rem;
+    &__title {
+      font-size: 1.8rem;
+    }
+    &__item {
+      font-size: 1.4rem;
+    }
+  }
+}
